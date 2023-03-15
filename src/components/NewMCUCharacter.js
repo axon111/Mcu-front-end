@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { API_URL } from '../constants';
+
 
 function NewMCUCharacter () {
 
@@ -15,7 +17,7 @@ function NewMCUCharacter () {
 
         try {
                 await axios.post(
-                    "http://localhost:3001/api/createMcuCharacter",
+                    API_URL+"/createMcuCharacter",
                     {
                         name,
                         debut,
@@ -30,7 +32,7 @@ function NewMCUCharacter () {
         }
         catch(e) {
                 console.log("error:" + e);
-                alert("Something went wrong, character not insterted!");
+                alert("Something went wrong, character not insterted!" + e);
         }
 
 

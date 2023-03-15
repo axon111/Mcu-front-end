@@ -8,7 +8,7 @@ function DeleteMcuCharacter() {
         let name = e.target.newName.value;
 
         try {
-            await axios.delete("http://localhost:3001/api/deleteMcuCharacter/"+name);
+            await axios.delete(API_URL + "/deleteMcuCharacter/"+name);
 
             alert("Character deleted successfully.");
         }

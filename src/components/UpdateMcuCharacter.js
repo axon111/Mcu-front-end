@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import {Navigate, useNavigate} from 'react-router-dom';
+import { API_URL } from '../constants';
 
 function UpdateMcuCharacter () {
 
@@ -18,7 +19,7 @@ function UpdateMcuCharacter () {
 
         try {
                 await axios.put(
-                    "http://localhost:3001/api/updateMcuCharacter",
+                    API_URL+"/updateMcuCharacter",
                     {
                         name,
                         debut,
